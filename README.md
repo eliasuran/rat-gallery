@@ -1,2 +1,2 @@
 # rat-gallery
-xdd
+GALLERY OF XDD FOR THE RATS
