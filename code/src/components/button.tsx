@@ -14,7 +14,7 @@ const Button = ({ text, link }: Props) => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <a href={link}>
-        <motion.div
+        <motion.button
           initial={{ scale: 1 }}
           animate={{
             scale: 1.3,
@@ -23,7 +23,7 @@ const Button = ({ text, link }: Props) => {
           className="bg-primary text-text p-4 text-xl rounded-md uppercase font-bold hover:bg-text hover:text-bg duration-500"
         >
           {text}
-        </motion.div>
+        </motion.button>
       </a>
     </motion.div>
   );
