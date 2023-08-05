@@ -9,18 +9,22 @@ interface Props {
 const Button = ({ text, link }: Props) => {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      initial={{ opacity: 0, x: "-100vw" }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{
+        duration: 0.5,
+        delay: 1.1,
+        type: "spring",
+        stiffness: 400,
+        damping: 30,
+      }}
     >
       <a href={link}>
         <motion.button
-          initial={{ scale: 1 }}
-          animate={{
-            scale: 1.3,
-          }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="bg-primary text-text p-4 text-xl rounded-md uppercase font-bold hover:bg-text hover:text-bg duration-500"
+          id="button"
+          className="bg-accent text-primary font-Barlow-Light font-bold px-4 py-2 text-lg rounded-md uppercase"
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
           {text}
         </motion.button>

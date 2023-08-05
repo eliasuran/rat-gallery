@@ -2,7 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-#xdd {
-  text-shadow: -10px -10px 0 #48295b, 10px -10px 0 #48295b, -10px 10px 0 #48295b,
-    10px 10px 0 #48295b;
+::selection {
+  background: #48295b;
+  color: #fff;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: Berlin-Sans-FB-Demi-Bold;
+  src: url("./../../public/fonts/BerlinSansFBDemiBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: Barlow-Bold;
+  src: url("./../../public/fonts/Barlow-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: Barlow-Light;
+  src: url("./../../public/fonts/Barlow-Light.ttf") format("opentype");
+}
+
+/* Shadow */
+
+#shadow {
+  text-shadow: 0 5px 0 #48295b;
+}
+
+#shadow2 {
+  text-shadow: 0 2px 0 #48295b;
 }

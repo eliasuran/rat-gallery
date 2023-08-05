@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        Berlin: "Berlin-Sans-FB-Demi-Bold",
+        "Barlow-Bold": "Barlow-Bold",
+        "Barlow-Light": "Barlow-Light",
+      },
       colors: {
         bg: "#110915",
         primary: "#48295b",
@@ -15,6 +20,7 @@ module.exports = {
         text: "#f6f1f9",
       },
       backgroundImage: {
+        xdd: "url('/img/xdd.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
