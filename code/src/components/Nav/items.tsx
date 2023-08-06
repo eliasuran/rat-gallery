@@ -1,16 +1,19 @@
 interface Props {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
+  link?: string;
 }
 
-const Items = ({ text, onClick }: Props) => {
+const Items = ({ text, onClick, link }: Props) => {
   return (
-    <div
-      className="hover:text-accent duration-300 cursor-pointer"
-      onClick={onClick}
-    >
-      {text}
-    </div>
+    <a href={link}>
+      <div
+        className="hover:text-accent duration-300 cursor-pointer uppercase"
+        onClick={onClick}
+      >
+        {text}
+      </div>
+    </a>
   );
 };
 

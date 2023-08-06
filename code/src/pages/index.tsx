@@ -1,38 +1,35 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Nav from "@/components/Nav";
-import Items from "@/components/Nav/items";
 import Header from "@/components/header";
 import SmallHeader from "@/components/small-header";
 import Button from "@/components/button";
+import ScrollNotif from "@/components/Scroll-notif";
 import Modal from "@/components/Modal";
 
 export default function Home() {
+  const [navSelected, setNavSelected] = useState(0); // [0, 1, 2]
+
   const [modalOpen, setModalOpen] = useState(false);
 
   const closeModal = () => setModalOpen(false);
   const openModal = () => setModalOpen(true);
 
   return (
-    <div className="overflow-x-hidden flex flex-col">
+    <div className="overflow-hidden flex flex-col">
       <section className="h-screen bg-bg flex flex-col justify-center items-center">
-        <Nav>
-          <div></div>
-          <Items
-            onClick={() => (modalOpen ? closeModal() : openModal())}
-            text="About"
-          />
-        </Nav>
+        <Nav close={closeModal} open={openModal} state={modalOpen} />
         <div className="w-96 h-full flex flex-col justify-center items-center gap-12 text-center">
           <Header text="Rat Gallery" />
           <SmallHeader text="A gallery of rats" />
-          <Button text="to gallery" link="/gallery" />
+          <Button text="view gallery" link="/gallery" />
+          <ScrollNotif />
         </div>
 
         <AnimatePresence initial={false} mode="wait">
           {modalOpen && (
             <Modal
-              header="HEADER HEADER"
+              header="TEAM"
               text="DOIWNJD9IUWHDNWUIDNHWIUDNWOIUDN"
               handleClose={closeModal}
             />

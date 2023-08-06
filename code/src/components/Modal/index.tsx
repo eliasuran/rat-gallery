@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop";
+import Card from "./card";
 
 interface Props {
   handleClose: () => void;
@@ -28,8 +29,11 @@ export default function Modal({ handleClose, header, text }: Props) {
         animate="visible"
         exit="exit"
       >
-        <h1 className="text-5xl font-semibold">{header}</h1>
-        <h2>{text}</h2>
+        <h1 className="text-7xl font-semibold font-Berlin">{header}</h1>
+        <div className="bg-red-400 w-full h-80 flex justify-around items-center">
+          <Card />
+          <Card />
+        </div>
       </motion.div>
     </Backdrop>
   );
