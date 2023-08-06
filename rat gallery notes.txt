@@ -1,3 +1,5 @@
+https://clips.twitch.tv/ShortShakingHerbsAliens-HDdKUQGrjEUc9xlH
+
 TODO:
  - CUSTOM SCROLLBAR
 	- https://www.thisdot.co/blog/creating-custom-scrollbars-with-react/
@@ -20,7 +22,8 @@ TODO:
  - MEDIA QUERIES
 
  - ABOUT PAGE
-
+	- CARDS
+	- ANIMATIONS
 
 DONE:
  - HOME

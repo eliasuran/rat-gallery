@@ -19,6 +19,57 @@
 
 /* Pseudo elements */
 
+#about-top {
+  position: relative;
+  overflow: hidden;
+}
+
+#about-top::before {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+  background-color: #110915e5;
+}
+
+#about-top::after {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  width: 101%;
+  height: 101%;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  background-color: var(--bg);
+}
+
+#team {
+  position: relative;
+}
+
+#team::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 25px;
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 0, 0 100%, 100% 100%);
+  background-color: var(--accent);
+}
+
+#team::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 25px;
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  background-color: var(--accent);
+}
+
 .line-container::before {
   content: "";
   top: 50%;

@@ -21,6 +21,7 @@ module.exports = {
       },
       backgroundImage: {
         xdd: "url('/img/xdd.png')",
+        xddgang: "url('/img/xddgang.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",

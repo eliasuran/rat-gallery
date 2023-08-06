@@ -1,13 +1,9 @@
 import { motion } from "framer-motion";
 import Items from "@/components/Nav/items";
 
-interface Props {
-  close: () => void;
-  open: () => void;
-  state: boolean;
-}
+interface Props {}
 
-const Nav = ({ close, open, state }: Props) => {
+const Nav = ({}: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
@@ -17,7 +13,7 @@ const Nav = ({ close, open, state }: Props) => {
     >
       <Items link="/" text="Home" />
       <Items link="/gallery" text="Gallery" />
-      <Items onClick={() => (state ? close() : open())} text="About" />
+      <Items link="/about" text="About" />
       <a href="/">
         <img src={"/img/logo.png"} className="h-full cursor-pointer" />
       </a>

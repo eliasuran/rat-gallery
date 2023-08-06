@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop";
-import Card from "./card";
 
 interface Props {
   handleClose: () => void;
   header: string;
-  text: string;
 }
 
 const dropIn = {
@@ -18,7 +16,15 @@ const dropIn = {
   exit: { y: "100vh", opacity: 0 },
 };
 
-export default function Modal({ handleClose, header, text }: Props) {
+//WHAT TO ADD WHEN APPLYING MODAL
+//{modalOpen && <Modal header="TEAM" handleClose={closeModal} />}
+//        <AnimatePresence initial={false} mode="wait"></AnimatePresence>
+// const [modalOpen, setModalOpen] = useState(false); const closeModal = () => setModalOpen(false); const openModal = () => setModalOpen(true);
+//close={closeModal} open={openModal} state={modalOpen}
+//onClick={() => (state ? close() : open())} text="About"
+//<Card /><Card />
+
+export default function Modal({ handleClose, header }: Props) {
   return (
     <Backdrop onClick={handleClose}>
       <motion.div
@@ -30,10 +36,7 @@ export default function Modal({ handleClose, header, text }: Props) {
         exit="exit"
       >
         <h1 className="text-7xl font-semibold font-Berlin">{header}</h1>
-        <div className="bg-red-400 w-full h-80 flex justify-around items-center">
-          <Card />
-          <Card />
-        </div>
+        <div className="bg-red-400 w-full h-80 flex justify-around items-center"></div>
       </motion.div>
     </Backdrop>
   );
