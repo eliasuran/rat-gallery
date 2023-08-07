@@ -4,7 +4,7 @@ import Team from "../../components/about/team";
 
 export default function About() {
   return (
-    <div className="bg-bg h-screen overflow-hidden flex flex-col">
+    <div className="bg-bg h-screen overflow-x-hidden flex flex-col">
       <Nav />
       <TopContainer />
       <Team />
