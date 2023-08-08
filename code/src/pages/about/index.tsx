@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
-import TopContainer from "../../components/about/top-container";
-import Team from "../../components/about/team";
+import TopContainer from "../../components/About components/top-container";
+import Team from "../../components/About components/team";
 
 export default function About() {
   return (

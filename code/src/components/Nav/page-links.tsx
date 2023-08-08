@@ -1,14 +1,15 @@
 interface Props {
   text: string;
   onClick?: () => void;
-  link?: string;
+  link: string;
+  selectedStyle?: string;
 }
 
-const Items = ({ text, onClick, link }: Props) => {
+const Items = ({ text, onClick, link, selectedStyle }: Props) => {
   return (
     <a href={link}>
       <div
-        className="hover:text-accent duration-300 cursor-pointer uppercase"
+        className={`hover:text-accent duration-300 cursor-pointer uppercase ${selectedStyle}`}
         onClick={onClick}
       >
         {text}

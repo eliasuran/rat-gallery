@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const TopContainer = () => {
   return (
     <div className="h-2/5 flex">
