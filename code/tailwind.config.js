@@ -21,7 +21,7 @@ module.exports = {
         text: "#f6f1f9",
       },
       backgroundImage: {
-        xdd: "url('/img/xdd.png')",
+        xdd: "url('/img/rathome.jpg')",
         xddgang: "url('/img/xddgang.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

@@ -13,8 +13,9 @@ const Nav = ({}: Props) => {
     <motion.div
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 right-0 m-10 pr-4 flex gap-8 h-8 text-text italic font-semibold z-50"
+      className="fixed top-0 right-0 m-10 pr-4 flex gap-8 h-8 text-text italic font-semibold z-50 "
     >
       <Items
         onClick={() => {
@@ -23,7 +24,7 @@ const Nav = ({}: Props) => {
         link="/"
         text="Home"
         {...(navValue === 0 && {
-          selectedStyle: "border-b-2 border-accent",
+          selectedStyle: "border-b-2 border-text",
         })}
       />
       <Items
@@ -33,7 +34,7 @@ const Nav = ({}: Props) => {
         link="/gallery"
         text="Gallery"
         {...(navValue === 1 && {
-          selectedStyle: "border-b-2 border-accent",
+          selectedStyle: "border-b-2 border-text",
         })}
       />
       <Items
@@ -43,7 +44,7 @@ const Nav = ({}: Props) => {
         link="/about"
         text="About"
         {...(navValue === 2 && {
-          selectedStyle: "border-b-2 border-accent",
+          selectedStyle: "border-b-2 border-text",
         })}
       />
       <a href="/">

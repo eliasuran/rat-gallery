@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Backdrop from "../Backdrop";
 
 interface Props {
+  modalOpen: boolean;
   handleClose: () => void;
   header: string;
 }
