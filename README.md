@@ -1,5 +1,7 @@
 # rat-gallery
 
-GALLERY OF XDD FOR THE RATS
+next tailwind
+
+bare øve prosjekt for å unruste
 
 https://trello.com/b/PyDiL1AW/rat-gallery
