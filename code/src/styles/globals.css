@@ -122,10 +122,13 @@
   border: 2px solid var(--accent);
   border-radius: 0.375rem;
   z-index: 3;
+  transition-duration: 0.5s;
 }
 
 #rat-examples:hover:before {
-  background-color: red;
+  margin-left: 24px;
+  margin-top: -24px;
+  background-color: var(--accent);
 }
 
 /* Fonts */

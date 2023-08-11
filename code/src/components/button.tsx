@@ -22,7 +22,7 @@ const Button = ({ text, link }: Props) => {
       <a href={link}>
         <motion.button
           id="button"
-          className="text-text border border-text font-Barlow-Light font-bold px-4 py-2 text-lg rounded-md uppercase overflow-hidden hvr-radial-out"
+          className="z-10 text-text border border-text font-Barlow-Light font-bold px-4 py-2 text-lg rounded-md uppercase overflow-hidden hvr-radial-out"
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >

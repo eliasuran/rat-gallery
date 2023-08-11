@@ -10,11 +10,11 @@ interface Props {
 const dropIn = {
   hidden: { y: "-100vh", opacity: 0 },
   visible: {
-    y: "0",
+    y: "100vh",
     opacity: 1,
     transition: { duration: 0.1, type: "string", damping: 25, stiffness: 500 },
   },
-  exit: { y: "100vh", opacity: 0 },
+  exit: { y: "200vh", opacity: 0 },
 };
 
 //WHAT TO ADD WHEN APPLYING MODAL

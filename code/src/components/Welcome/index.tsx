@@ -1,5 +1,6 @@
 import Button from "@/components/button";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import Modal from "../Modal";
 
 export default function Welcome() {
@@ -15,12 +16,15 @@ export default function Welcome() {
   return (
     <section
       id="welcome"
-      className="min-h-screen bg-xdd bg-local bg-cover -z-20"
+      className="min-h-screen bg-xdd bg-local bg-cover z-10"
     >
-      {modalOpen && (
-        <Modal header="xdd" modalOpen={modalOpen} handleClose={closeModal} />
-      )}
-      <div className="absolute h-screen w-screen bg-[#110915ec] -z-10"></div>
+      <AnimatePresence initial={false} mode="wait">
+        {modalOpen && (
+          <Modal header="xdd" modalOpen={modalOpen} handleClose={closeModal} />
+        )}
+      </AnimatePresence>
+
+      <div className="absolute h-screen w-screen bg-[#110915ec] -z-20"></div>
       <div className="z-10 m-36 flex">
         <div className="text-text w-1/2 flex flex-col gap-12">
           <h1 id="shadow" className="text-8xl font-Berlin">
