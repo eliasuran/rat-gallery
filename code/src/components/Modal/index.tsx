@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import Backdrop from "../Backdrop";
+import { useDispatch } from "react-redux";
+import { closeModal } from "@/redux/modalSlice";
 
 interface Props {
-  modalOpen: boolean;
-  handleClose: () => void;
   header: string;
 }
 
 const dropIn = {
   hidden: { y: "-100vh", opacity: 0 },
   visible: {
-    y: "100vh",
+    y: 0,
     opacity: 1,
     transition: { duration: 0.1, type: "string", damping: 25, stiffness: 500 },
   },
@@ -25,11 +25,20 @@ const dropIn = {
 //onClick={() => (state ? close() : open())} text="About"
 //<Card /><Card />
 
-export default function Modal({ handleClose, header }: Props) {
+export default function Modal({ header }: Props) {
+  const dispatch = useDispatch();
+
+  const handleClose = () => {
+    dispatch(closeModal());
+  };
   return (
-    <Backdrop onClick={handleClose}>
+    <Backdrop
+      onClick={() => {
+        handleClose();
+      }}
+    >
       <motion.div
-        className="w-1/2 h-1/2 bg-primary text-text rounded-lg flex flex-col justify-center text-center gap-4"
+        className="w-1/2 h-1/2 bg-primary text-text rounded-lg flex flex-col justify-center text-center gap-4 z-50"
         onClick={(e) => e.stopPropagation()}
         variants={dropIn}
         initial="hidden"

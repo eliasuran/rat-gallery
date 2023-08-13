@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import Link from "next/link";
 
 interface SocialsProps extends React.HTMLAttributes<HTMLImageElement> {
   src: string;
@@ -8,9 +9,9 @@ interface SocialsProps extends React.HTMLAttributes<HTMLImageElement> {
 
 const Socials: FC<SocialsProps> = ({ link, ...props }) => {
   return (
-    <a href={link} target="_blank">
+    <Link href={link} target="_blank">
       <img {...props} className="w-full" />
-    </a>
+    </Link>
   );
 };
 

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Items from "@/components/Nav/page-links";
 import { useSelector, useDispatch } from "react-redux";
 import { setNav0, setNav1, setNav2 } from "@/redux/navSlice";
+import Link from "next/link";
 
 interface Props {}
 
@@ -47,9 +48,9 @@ const Nav = ({}: Props) => {
           selectedStyle: "border-b-2 border-text",
         })}
       />
-      <a href="/">
+      <Link href="/">
         <img src={"/img/logo.png"} className="h-full cursor-pointer" />
-      </a>
+      </Link>
     </motion.div>
   );
 };

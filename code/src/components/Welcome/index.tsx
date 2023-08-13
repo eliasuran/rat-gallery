@@ -1,30 +1,12 @@
 import Button from "@/components/button";
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import Modal from "../Modal";
 
 export default function Welcome() {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const closeModal = () => {
-    setModalOpen(false), console.log("xdd");
-  };
-  const openModal = () => {
-    setModalOpen(true), console.log("xdd");
-  };
-
   return (
     <section
       id="welcome"
-      className="min-h-screen bg-xdd bg-local bg-cover z-10"
+      className="min-h-screen bg-xdd bg-local bg-cover z-10 overflow-hidden"
     >
-      <AnimatePresence initial={false} mode="wait">
-        {modalOpen && (
-          <Modal header="xdd" modalOpen={modalOpen} handleClose={closeModal} />
-        )}
-      </AnimatePresence>
-
-      <div className="absolute h-screen w-screen bg-[#110915ec] -z-20"></div>
+      <div className="absolute h-full w-screen bg-[#110915ec] -z-20"></div>
       <div className="z-10 m-36 flex">
         <div className="text-text w-1/2 flex flex-col gap-12">
           <h1 id="shadow" className="text-8xl font-Berlin">
@@ -41,11 +23,7 @@ export default function Welcome() {
         </div>
         <div id="welcome-seperator" className="w-1 relative"></div>
         <div className="w-1/2 flex justify-center items-center">
-          <div
-            id="rat-examples"
-            className="w-96 h-64 z-50"
-            onClick={() => (modalOpen ? closeModal() : openModal())}
-          >
+          <div id="rat-examples" className="w-96 h-64 z-50">
             <img
               className="w-full h-full border-2 rounded-md border-accent relative z-10"
               src={"/img/xdd.png"}

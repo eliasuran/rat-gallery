@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface Props {
@@ -19,7 +20,7 @@ const Button = ({ text, link }: Props) => {
         damping: 30,
       }}
     >
-      <a href={link}>
+      <Link href={link}>
         <motion.button
           id="button"
           className="z-10 text-text border border-text font-Barlow-Light font-bold px-4 py-2 text-lg rounded-md uppercase overflow-hidden hvr-radial-out"
@@ -28,7 +29,7 @@ const Button = ({ text, link }: Props) => {
         >
           {text}
         </motion.button>
-      </a>
+      </Link>
     </motion.div>
   );
 };

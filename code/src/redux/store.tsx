@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { navSlice } from "./navSlice";
 import { createWrapper } from "next-redux-wrapper";
+import { navSlice } from "./navSlice";
+import { modalSlice } from "./modalSlice";
 
 const makeStore = () =>
   configureStore({
-    reducer: { [navSlice.name]: navSlice.reducer },
+    reducer: {
+      [navSlice.name]: navSlice.reducer,
+      [modalSlice.name]: modalSlice.reducer,
+    },
     devTools: true,
   });
 
