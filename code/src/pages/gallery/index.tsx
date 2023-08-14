@@ -1,3 +1,9 @@
+import Nav from "@/components/Nav";
+
 export default function Gallery() {
-  return <main className="h-screen overflow-hidden bg-bg">Gallery</main>;
+  return (
+    <main className="bg-bg h-[10000px] overflow-hidden flex flex-col">
+      <Nav />
+    </main>
+  );
 }
