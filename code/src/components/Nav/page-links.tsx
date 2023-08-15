@@ -1,18 +1,22 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface Props {
   text: string;
-  onClick?: () => void;
   link: string;
-  selectedStyle?: string;
 }
 
-const Items = ({ text, onClick, link, selectedStyle }: Props) => {
+const Items = ({ text, link }: Props) => {
+  const activePage = usePathname();
+
+  let selectedColor = "";
+  if (activePage === link) {
+    selectedColor = "border-b-2";
+  }
   return (
     <Link href={link}>
       <div
-        className={`hover:text-accent duration-300 cursor-pointer uppercase ${selectedStyle}`}
-        onClick={onClick}
+        className={`hover:text-accent duration-300 cursor-pointer uppercase border-accent ${selectedColor}`}
       >
         {text}
       </div>

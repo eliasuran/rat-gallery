@@ -13,7 +13,11 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-bg w-1/3 flex justify-center items-center">
-        <img src={"/img/logo.png"} className="h-28" />
+        <img
+          src={"/img/logo.png"}
+          alt="official rat gallery logo kinda big"
+          className="h-28"
+        />
       </div>
       <div className="bg-bg w-1/3 flex justify-end items-center p-10">
         <div className="h-full w-16 flex flex-col justify-around">
