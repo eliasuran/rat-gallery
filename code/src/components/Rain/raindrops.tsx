@@ -67,10 +67,11 @@ const RainDrop = () => {
       onClick={() => {
         dispatch(openModal());
       }}
-      initial={{ x: randomInitialX, y: randomInitialY }}
+      initial={{ y: randomInitialY }}
       animate={{ y: "150vh", rotate: randomInitialRotate }}
       transition={{ duration: 5, repeat: Infinity }}
-      className={`absolute`}
+      className="absolute"
+      style={{ left: randomInitialX }}
     >
       <img src="/img/xdd.png" alt="raindrop" className="w-full h-full" />
     </motion.div>

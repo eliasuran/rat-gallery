@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-bg2 text-text h-80 flex p-10">
       <div className="bg-bg w-1/3 p-10 flex flex-col gap-2">
         <h2 className="font-Berlin text-5xl">Explore</h2>
-        <div className="flex flex-col gap-2 text-text text-2xl italic font-semibold">
+        <div className="flex flex-col gap-2 text-text text-2xl italic font-semibold w-40">
           <Links link="/" text="home" />
           <Links link="/gallery" text="gallery" />
           <Links link="about" text="about" />

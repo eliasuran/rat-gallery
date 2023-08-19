@@ -36,7 +36,7 @@ const Nav = () => {
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.8 }}
       className={`fixed top-0 right-0 m-10 pr-4 h-8 flex gap-8 text-text italic font-semibold z-50 duration-500 ${
-        scrollingDown ? "top-0" : "-top-[24vh]"
+        scrollingDown ? "top-0" : "-top-[25vh]"
       }`}
     >
       <Items link="/" text="Home" />

@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import Button from "@/components/Universal/button";
 
 export default function Welcome() {
   return (

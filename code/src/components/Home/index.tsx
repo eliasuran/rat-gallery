@@ -1,8 +1,8 @@
 import { AnimatePresence } from "framer-motion";
 import { useSelector } from "react-redux";
-import Header from "@/components/header";
-import SmallHeader from "@/components/small-header";
-import Button from "@/components/button";
+import Header from "@/components/Universal/header";
+import SmallHeader from "@/components/Universal/small-header";
+import Button from "@/components/Universal/button";
 import ScrollNotif from "@/components/Scroll-notif";
 import Rain from "@/components/Rain";
 import Modal from "@/components/Modal";

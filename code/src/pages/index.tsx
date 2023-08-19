@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Nav from "@/components/Nav";
 import HomeSection from "@/components/Home";
 import WelcomeSection from "@/components/Welcome";
