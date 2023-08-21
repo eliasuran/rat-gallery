@@ -1,0 +1,24 @@
+[
+  {
+    "basics": [
+      {
+        "name": "xdd",
+        "description": "The original xdd.",
+        "img": "https://cdn.7tv.app/emote/613937fcf7977b64f644c0d2/4x.webp",
+        "link": "https://7tv.app/emotes/613937fcf7977b64f644c0d2"
+      },
+      {
+        "name": "xdx",
+        "description": "Squeezed xdd",
+        "img": "https://cdn.7tv.app/emote/62437e6ede82a984598efad1/4x.webp",
+        "link": "https://7tv.app/emotes/62437e6ede82a984598efad1"
+      },
+      {
+        "name": "ddx",
+        "description": "xdd with mouth open",
+        "img": "https://cdn.7tv.app/emote/62f64c7fac5a78a39d493e54/4x.webp",
+        "link": "https://7tv.app/emotes/62f64c7fac5a78a39d493e54"
+      }
+    ]
+  }
+]

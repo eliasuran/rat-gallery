@@ -1,4 +1,4 @@
-import Button from "./../../Universal/button";
+import Button from "../../Universal/button";
 
 interface Props {
   title: string;

@@ -12,7 +12,7 @@ const SmallHeader = ({ text }: Props) => {
       transition={{ duration: 0.8, delay: 0.5 }}
     >
       <h1
-        className="uppercase text-text text-3xl drop-shadow-sm shadow-primary font-Barlow-Bold"
+        className="uppercase text-text lg:text-3xl md:text-3xl sm:text-3xl text-xl drop-shadow-sm shadow-primary font-Barlow-Bold"
         id="shadow2"
       >
         {text}

@@ -12,7 +12,7 @@ const Header = ({ text }: Props) => {
       transition={{ duration: 1, delay: 0.2 }}
     >
       <h1
-        className="uppercase font-bold text-text text-9xl drop-shadow-sm shadow-primary font-Berlin m-0"
+        className="uppercase font-bold text-text lg:text-9xl md:text-9xl sm:text-9xl text-7xl drop-shadow-sm shadow-primary font-Berlin m-0"
         id="shadow"
       >
         {text}

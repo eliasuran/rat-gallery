@@ -6,7 +6,7 @@ const graphicDesign = "mpu69";
 
 const Team = () => {
   return (
-    <div id="team" className="h-3/5 flex justify-evenly items-center">
+    <div className="h-3/5 flex justify-evenly items-center flex-wrap gap-y-6 gap-x-4">
       <Card
         link={`https://github.com/${founder}`}
         name={founder}
