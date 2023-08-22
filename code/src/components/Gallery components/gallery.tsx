@@ -1,10 +1,9 @@
 import Sub from "./Sub/subGallery";
-import Fetch from "./fetchRats";
 
 const Gallery = () => {
   return (
     <main className="min-h-screen pt-16 px-32 flex flex-col items-center gap-4">
-      <h2 className="font-Berlin text-3xl text-text text-center border-b-2 border-text p-6 w-1/2">
+      <h2 className="font-Berlin text-3xl text-text text-center border-b-2 border-text p-6 sm:w-1/2 xs:w-full w-72 bg-red-400">
         RAT GALLERY
       </h2>
       <Sub
@@ -14,18 +13,29 @@ const Gallery = () => {
         text="These are the basic rat emotes, they are the most used, having countless usecases. Appropriate for any and all situations."
       />
       <Sub
+        src="https://cdn.7tv.app/emote/62faeb630ece072bb90feb21/4x.webp"
+        alt="picture of an xdd blushing uwu"
+        title="cute"
+        text="The cutest among the rats. Appropriate for cute situations. Use with caution, as they are very powerful."
+      />
+      <Sub
         src="https://cdn.7tv.app/emote/640f8f471db1890a6196cbc1/4x.webp"
-        alt="xdd"
+        alt="cursed xdd"
         title="cursed"
         text="The cursed rat emotes. These are the ones that you use when you want to make someone feel uncomfortable. Use with caution."
       />
       <Sub
         src="https://cdn.7tv.app/emote/630c398c581c4d862ef98a19/4x.webp"
-        alt="xdd"
+        alt="xdd jerking off"
         title="sus"
         text="Susge"
       />
-      <Fetch />
+      <Sub
+        src="https://cdn.7tv.app/emote/633489007500557623297eb7/4x.webp"
+        alt="pro player FAKER as a rat"
+        title="players"
+        text="Pro players that are rats."
+      />
     </main>
   );
 };

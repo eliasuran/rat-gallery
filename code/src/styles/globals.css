@@ -44,6 +44,13 @@
   background-color: var(--accent);
 }
 
+@media (max-width: 768px) {
+  #gallery-header::before,
+  #gallery-header::after {
+    display: none;
+  }
+}
+
 #about-top {
   position: relative;
   overflow: hidden;
