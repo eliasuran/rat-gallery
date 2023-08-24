@@ -6,11 +6,8 @@ const Header = () => {
       className="relative h-96 flex text-text font-Berlin w-full"
       id="gallery-header"
     >
-      <div className="sm:w-1/2 w-full flex justify-center items-center">
-        <h1
-          className="lg:text-9xl sm:text-7xl xs:text-8xl text-6xl"
-          id="shadow"
-        >
+      <div className="md:w-1/2 w-full flex justify-center items-center">
+        <h1 className="lg:text-9xl xs:text-8xl text-6xl" id="shadow">
           GALLERY
         </h1>
       </div>

@@ -2,8 +2,8 @@ import Sub from "./Sub/subGallery";
 
 const Gallery = () => {
   return (
-    <main className="min-h-screen pt-16 px-32 flex flex-col items-center gap-4">
-      <h2 className="font-Berlin text-3xl text-text text-center border-b-2 border-text p-6 sm:w-1/2 xs:w-full w-72 bg-red-400">
+    <main className="min-h-screen pt-16 sm:px-32 xs:px-24 px-12 flex flex-col items-center gap-4">
+      <h2 className="font-Berlin text-3xl text-text text-center border-b-2 border-text p-6 sm:w-1/2 xs:w-full w-72">
         RAT GALLERY
       </h2>
       <Sub
