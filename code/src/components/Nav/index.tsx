@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import Items from "@/components/Nav/page-links";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import Burger from "./../svg/burger";
 
 const Nav = () => {
+  const [dropdown, setDropdown] = useState(false);
   const [scrollingDown, setScrollingDown] = useState(true);
 
   useEffect(() => {
@@ -35,20 +37,24 @@ const Nav = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.8 }}
-      className={`fixed top-0 right-0 m-10 pr-4 h-8 flex gap-8 text-text italic font-semibold z-50 duration-500 ${
+      className={`fixed top-0 right-0 m-10 pr-4 h-8 flex text-text italic font-semibold z-50 duration-500 ${
         scrollingDown ? "top-0" : "-top-[25vh]"
       }`}
     >
-      <Items link="/" text="Home" />
-      <Items link="/gallery" text="Gallery" />
-      <Items link="/about" text="About" />
-      <Link href="/">
-        <img
-          src={"/img/logo.png"}
-          alt="official rat gallery logo"
-          className="h-full cursor-pointer"
-        />
-      </Link>
+      <div className="xs:flex gap-8 hidden">
+        <Items link="/" text="Home" />
+        <Items link="/gallery" text="Gallery" />
+        <Items link="/about" text="About" />
+        <Link href="/">
+          <img
+            src={"/img/logo.png"}
+            alt="official rat gallery logo"
+            className="h-full cursor-pointer"
+          />
+        </Link>
+      </div>
+      <Burger />
+      <div></div>
     </motion.div>
   );
 };
