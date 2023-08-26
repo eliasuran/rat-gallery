@@ -163,6 +163,12 @@
   background-color: var(--accent);
 }
 
+@media (max-width: 456px) {
+  #rat-examples:before {
+    display: none;
+  }
+}
+
 #sub-gallery:before {
   content: "";
   position: absolute;

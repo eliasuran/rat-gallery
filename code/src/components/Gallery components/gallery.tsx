@@ -25,12 +25,6 @@ const Gallery = () => {
         text="The cursed rat emotes. These are the ones that you use when you want to make someone feel uncomfortable. Use with caution."
       />
       <Sub
-        src="https://cdn.7tv.app/emote/630c398c581c4d862ef98a19/4x.webp"
-        alt="xdd jerking off"
-        title="sus"
-        text="Susge"
-      />
-      <Sub
         src="https://cdn.7tv.app/emote/633489007500557623297eb7/4x.webp"
         alt="pro player FAKER as a rat"
         title="players"

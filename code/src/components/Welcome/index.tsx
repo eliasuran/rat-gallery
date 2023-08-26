@@ -25,7 +25,7 @@ export default function Welcome() {
           <Button text="view gallery" link="/gallery" />
         </div>
         <div id="welcome-seperator" className="w-1 relative"></div>
-        <div className="lg:w-1/2 w-full flex lg:justify-center justify-start items-center">
+        <div className="lg:w-1/2 w-full flex xl:justify-center justify-start items-center">
           <div id="rat-examples" className="w-96 h-64 z-50">
             <img
               className="w-full h-full border-2 rounded-md border-accent relative z-10"

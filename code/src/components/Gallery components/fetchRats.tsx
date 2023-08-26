@@ -20,7 +20,7 @@ const FetchRats = ({ id }: Props) => {
 
   if (!selectedArray) {
     return (
-      <div className="text-text text-9xl">
+      <div className="text-text text-9xl bg-red-400">
         No rats with this id blud. only use links from the website if u wanna
         see rats
       </div>
@@ -32,7 +32,10 @@ const FetchRats = ({ id }: Props) => {
   return (
     <div className="h-full flex flex-wrap justify-center items-center gap-12 p-8 overflow">
       {items.map((innerItem: innerItem, innerIndex: number) => (
-        <div key={innerIndex} className="flex flex-col items-center gap-8">
+        <div
+          key={innerIndex}
+          className="flex flex-col items-center gap-8 break-all text-center"
+        >
           <Link href={innerItem.link} target="_blank">
             <img
               src={innerItem.img}

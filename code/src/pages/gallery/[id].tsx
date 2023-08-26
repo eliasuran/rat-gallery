@@ -18,7 +18,7 @@ const SubGalleryBody = () => {
 
   return (
     <main className="bg-bg min-h-screen p-16">
-      <div className="text-text font-Berlin text-8xl uppercase ">
+      <div className="text-text font-Berlin text-8xl uppercase">
         <span className="text-lg">gallery/</span>
         <h1>{id}</h1>
       </div>

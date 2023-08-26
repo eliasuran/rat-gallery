@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Items from "@/components/Nav/page-links";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Burger from "./../svg/burger";
+import Dropdown from "./dropdown";
 
 const Nav = () => {
   const [dropdown, setDropdown] = useState(false);
@@ -31,17 +32,20 @@ const Nav = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (dropdown) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [dropdown]);
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.8 }}
-      className={`fixed top-0 right-0 m-10 pr-4 h-8 flex text-text italic font-semibold z-50 duration-500 ${
-        scrollingDown ? "top-0" : "-top-[25vh]"
+    <div
+      className={`fixed right-0 xs:pr-4 pr-0 h-24 w-screen flex justify-end text-text italic font-semibold z-50 duration-500 bg-bg ${
+        scrollingDown ? "top-0" : "-top-[24vh]"
       }`}
     >
-      <div className="xs:flex gap-8 hidden">
+      <div className="xs:flex gap-8 hidden m-10">
         <Items link="/" text="Home" />
         <Items link="/gallery" text="Gallery" />
         <Items link="/about" text="About" />
@@ -49,13 +53,26 @@ const Nav = () => {
           <img
             src={"/img/logo.png"}
             alt="official rat gallery logo"
-            className="h-full cursor-pointer"
+            className="h-10 cursor-pointer"
           />
         </Link>
       </div>
-      <Burger />
-      <div></div>
-    </motion.div>
+      <div
+        className={`z-50 fixed left-0 w-full h-20 p-4 xs:hidden flex justify-between items-center bg-bg duration-500 ${
+          scrollingDown ? "top-0" : "-top-[24vh]"
+        }`}
+      >
+        <Link href="/">
+          <img
+            src={"/img/logo.png"}
+            alt="official rat gallery logo"
+            className="h-14 cursor-pointer"
+          />
+        </Link>
+        <Burger dropdown={dropdown} setDropdown={setDropdown} />
+      </div>
+      <AnimatePresence>{dropdown && <Dropdown />}</AnimatePresence>
+    </div>
   );
 };
 
