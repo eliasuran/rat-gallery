@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import data from "./../../api/rats.json";
+import { on } from "events";
 
 interface Props {
   id: string;
@@ -33,7 +34,7 @@ const FetchRats = ({ id, onRatsLoaded }: Props) => {
 
   useEffect(() => {
     onRatsLoaded();
-  }, [items]);
+  }, [onRatsLoaded]);
 
   return (
     <div className="h-full flex flex-wrap justify-center items-center gap-12 p-8">
