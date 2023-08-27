@@ -5,7 +5,6 @@ import Loading from "./../../components/Gallery components/Sub/loading";
 
 const SubGalleryBody = () => {
   const [id, setId] = useState<string | null>(null);
-  // const [ratsNotReady, setRatsNotReady] = useState(true);
   const url = usePathname();
 
   useEffect(() => {
@@ -18,33 +17,34 @@ const SubGalleryBody = () => {
     }
   }, [url]);
 
-  // useEffect(() => {
-  //   setRatsNotReady(true);
-  // }, [id]);
+  const [ratsNotReady, setRatsNotReady] = useState(true);
 
-  // const handleRatsLoaded = () => {
-  //   setRatsNotReady(false);
-  // };
+  useEffect(() => {
+    setRatsNotReady(true);
+  }, [id]);
 
-  // const onRatsLoadedCallback = useCallback(handleRatsLoaded, []);
+  const handleRatsLoaded = () => {
+    setRatsNotReady(false);
+  };
 
-  // useEffect(() => {
-  //   if (ratsNotReady) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "unset";
-  //   }
-  // }, [ratsNotReady]);
-  //onRatsLoaded={onRatsLoadedCallback}
+  const onRatsLoadedCallback = useCallback(handleRatsLoaded, []);
+
+  useEffect(() => {
+    if (ratsNotReady) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [ratsNotReady]);
 
   return (
     <main className="bg-bg min-h-screen p-16">
-      {/* {ratsNotReady && <Loading />} */}
+      {ratsNotReady && <Loading />}
       <div className="text-text font-Berlin text-8xl uppercase">
         <span className="text-lg">gallery/</span>
         <h1>{id}</h1>
       </div>
-      {id && <FetchRats id={id} />}
+      {id && <FetchRats id={id} onRatsLoaded={onRatsLoadedCallback} />}
     </main>
   );
 };
