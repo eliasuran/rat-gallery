@@ -32,13 +32,11 @@ const FetchRats = ({ id, onRatsLoaded }: Props) => {
   const items = selectedArray[id];
 
   useEffect(() => {
-    if (items) {
-      onRatsLoaded();
-    }
+    onRatsLoaded();
   }, [items]);
 
   return (
-    <div className="h-full flex flex-wrap justify-center items-center gap-12 p-8 overflow">
+    <div className="h-full flex flex-wrap justify-center items-center gap-12 p-8">
       {items.map((innerItem: innerItem, innerIndex: number) => (
         <div
           key={innerIndex}

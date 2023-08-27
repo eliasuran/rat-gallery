@@ -10,7 +10,7 @@ interface SocialsProps extends React.HTMLAttributes<HTMLImageElement> {
 const Socials: FC<SocialsProps> = ({ link, ...props }) => {
   return (
     <Link href={link} target="_blank">
-      <img {...props} className="w-full" />
+      <img {...props} alt="socials" className="w-full" />
     </Link>
   );
 };

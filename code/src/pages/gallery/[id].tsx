@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import FetchRats from "./../../components/Gallery components/fetchRats";
 import Loading from "./../../components/Gallery components/Sub/loading";
@@ -26,6 +26,8 @@ const SubGalleryBody = () => {
     setRatsNotReady(false);
   };
 
+  const onRatsLoadedCallback = useCallback(handleRatsLoaded, []);
+
   useEffect(() => {
     if (ratsNotReady) {
       document.body.style.overflow = "hidden";
@@ -41,7 +43,7 @@ const SubGalleryBody = () => {
         <span className="text-lg">gallery/</span>
         <h1>{id}</h1>
       </div>
-      {id && <FetchRats id={id} onRatsLoaded={handleRatsLoaded} />}
+      {id && <FetchRats id={id} onRatsLoaded={onRatsLoadedCallback} />}
     </main>
   );
 };
