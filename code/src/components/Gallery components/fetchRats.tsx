@@ -1,11 +1,9 @@
-import { useEffect } from "react";
 import Link from "next/link";
 import data from "./../../api/rats.json";
-import { on } from "events";
 
 interface Props {
   id: string;
-  onRatsLoaded: () => void;
+  // onRatsLoaded: () => void;
 }
 
 interface innerItem {
@@ -18,7 +16,7 @@ interface RatData {
   [key: string]: innerItem[];
 }
 
-const FetchRats = ({ id, onRatsLoaded }: Props) => {
+const FetchRats = ({ id }: Props) => {
   const selectedArray = data.find((item: RatData) => id in item) as RatData;
 
   if (!selectedArray) {
@@ -32,9 +30,9 @@ const FetchRats = ({ id, onRatsLoaded }: Props) => {
 
   const items = selectedArray[id];
 
-  useEffect(() => {
-    onRatsLoaded();
-  }, [onRatsLoaded]);
+  // useEffect(() => {
+  //   onRatsLoaded();
+  // }, [onRatsLoaded]);
 
   return (
     <div className="h-full flex flex-wrap justify-center items-center gap-12 p-8">
