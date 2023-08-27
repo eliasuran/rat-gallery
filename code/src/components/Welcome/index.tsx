@@ -4,9 +4,9 @@ export default function Welcome() {
   return (
     <section
       id="welcome"
-      className="min-h-screen bg-xdd bg-local bg-cover z-10 overflow-hidden"
+      className="min-h-screen bg-xdd bg-local bg-cover z-10 w-[99.1vw] overflow-hidden"
     >
-      <div className="absolute h-full w-screen bg-[#110915ec] -z-20"></div>
+      <div className="absolute h-full w-full bg-[#110915ec] -z-20"></div>
       <div className="z-10 xl:m-36 lg:m-12 m-12 flex xxl:flex-row xl:flex-row lg:flex-col flex-col xl:gap-0 gap-6">
         <div className="text-text xl:w-1/2 xs:w-2/3 w-full flex flex-col gap-12">
           <h1
