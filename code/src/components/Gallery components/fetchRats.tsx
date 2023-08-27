@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import data from "./../../api/rats.json";
 
 interface Props {
   id: string;
+  onRatsLoaded: () => void;
 }
 
 interface innerItem {
@@ -15,7 +17,7 @@ interface RatData {
   [key: string]: innerItem[];
 }
 
-const FetchRats = ({ id }: Props) => {
+const FetchRats = ({ id, onRatsLoaded }: Props) => {
   const selectedArray = data.find((item: RatData) => id in item) as RatData;
 
   if (!selectedArray) {
@@ -28,6 +30,12 @@ const FetchRats = ({ id }: Props) => {
   }
 
   const items = selectedArray[id];
+
+  useEffect(() => {
+    if (items) {
+      onRatsLoaded();
+    }
+  }, [items]);
 
   return (
     <div className="h-full flex flex-wrap justify-center items-center gap-12 p-8 overflow">

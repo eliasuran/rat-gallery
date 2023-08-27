@@ -71,7 +71,9 @@ const Nav = () => {
         </Link>
         <Burger dropdown={dropdown} setDropdown={setDropdown} />
       </div>
-      <AnimatePresence>{dropdown && <Dropdown />}</AnimatePresence>
+      <AnimatePresence>
+        {dropdown && <Dropdown setDropdown={setDropdown} />}
+      </AnimatePresence>
     </div>
   );
 };
