@@ -1,7 +1,11 @@
-# rat-gallery
+# Rat Gallery
 
-next tailwind
+Tech stack:
+Next.JS w/TypeScript
+TailwindCSS
 
-bare øve prosjekt for å unruste
+Øve prosjekt for å lære TypeScript og Next.JS.
+
+Endte opp med å komme langt på det. Ikke egentlig noen baktanke med prosjektet. 
 
 https://trello.com/b/PyDiL1AW/rat-gallery
